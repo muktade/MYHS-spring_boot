@@ -2,10 +2,7 @@ package com.home.rent.service.myservice.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -14,8 +11,12 @@ public class Reply {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-//    comment_id;
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+    private Comments comment;
     private String text;
-//    user_id;
+
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+    private User user;
     private Date date;
 }

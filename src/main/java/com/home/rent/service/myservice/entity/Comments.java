@@ -10,7 +10,7 @@ import java.util.Set;
 
 @Entity
 @Data
-public class comments extends Base {
+public class Comments extends Base {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
     private User commenter;

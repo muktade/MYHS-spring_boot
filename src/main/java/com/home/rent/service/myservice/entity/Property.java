@@ -4,6 +4,8 @@ package com.home.rent.service.myservice.entity;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import java.util.Date;
 import java.util.HashSet;
@@ -26,7 +28,9 @@ public class Property extends Base {
 //    private Enum facing;
     private String description;
     private Date publishDate;
-//    user_id
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
 
 
 }
