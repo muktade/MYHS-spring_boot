@@ -2,7 +2,6 @@ package com.home.rent.service.myservice.entity;
 
 
 import com.home.rent.service.myservice.enums.EFacing;
-import com.home.rent.service.myservice.enums.ERole;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @Table(name = "facing")
-public class Facinh {
+public class Facing {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

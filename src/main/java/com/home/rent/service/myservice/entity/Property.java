@@ -1,6 +1,8 @@
 package com.home.rent.service.myservice.entity;
 
 
+import com.home.rent.service.myservice.enums.EFacing;
+import com.home.rent.service.myservice.enums.EPaymentFrequence;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -16,16 +18,17 @@ import java.util.Set;
 public class Property extends Base {
 
     private String name;
+
     @OneToOne
     private PropertyType propertyType;
     private Double price;
     private String size;
 //    private Photo[] photo;
-//    private Enum paymentFrequency;
+    private EPaymentFrequence paymentFrequency;
     private String completionStatus;
     private Boolean isNagotiable;
     private String location;
-//    private Enum facing;
+    private EFacing facing;
     private String description;
     private Date publishDate;
 
