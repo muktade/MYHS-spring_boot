@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Page<User> getBtIds(Pageable pageable, Long... ids) {
+    public Page<User> getByIds(Pageable pageable, Long... ids) {
         if(ids==null || (ids.length < 1)){
             return getAll(pageable);
         }else {
