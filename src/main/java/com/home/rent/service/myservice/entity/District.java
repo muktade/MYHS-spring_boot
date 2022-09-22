@@ -1,7 +1,7 @@
 package com.home.rent.service.myservice.entity;
 
 
-import com.home.rent.service.myservice.enumentity.EDivision;
+import com.home.rent.service.myservice.enums.EDivision;
 import lombok.Data;
 
 import javax.persistence.*;

@@ -1,4 +1,4 @@
-package com.home.rent.service.myservice.enumentity;
+package com.home.rent.service.myservice.enums;
 
 public enum ERole {
     ROLE_USER,

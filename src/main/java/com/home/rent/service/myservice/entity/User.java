@@ -33,5 +33,5 @@ public class User extends Base {
     private String address;
 
     @OneToMany(fetch = FetchType.EAGER)
-    private Area area;
+    private Set<Area> area = new HashSet<>();
 }
