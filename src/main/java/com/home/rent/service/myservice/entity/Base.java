@@ -14,4 +14,7 @@ public class Base {
 
     private Boolean isApproved;
 
+    public boolean hasId() {
+        return id != null && id > 0;
+    }
 }

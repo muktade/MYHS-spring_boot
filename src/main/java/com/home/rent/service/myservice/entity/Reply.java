@@ -4,6 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Data
@@ -13,7 +15,7 @@ public class Reply {
     private Long id;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
-    private Comments comment;
+    private Set<Comments> comment = new HashSet<>();
     private String text;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)

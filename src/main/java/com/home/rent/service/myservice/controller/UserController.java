@@ -6,7 +6,6 @@ import com.home.rent.service.myservice.exceptions.ResourceNotFoundException;
 import com.home.rent.service.myservice.service.UserService;
 import com.home.rent.service.myservice.utils.PageUtils;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +23,7 @@ public class UserController implements BaseController<User, Long> {
 
     @Override
     public ResponseEntity<User> save(User user) {
+        System.out.println(user);
         userService.save(user);
         return ResponseEntity.ok(user);
     }

@@ -19,15 +19,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User save(User user)  {
+
         return userRepository.save(user);
     }
 
     @Override
     public User update(User user) throws Exception {
-        if(user.hasId()){
+        if (user.hasId()) {
             return save(user);
-        }else {
-            throw  new InvalidOperationException("User id not found");
+        } else {
+            throw new InvalidOperationException("User id required for update operation");
         }
     }
 
