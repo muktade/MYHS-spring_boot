@@ -19,4 +19,8 @@ public class City {
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
     private District district;
 
+    public boolean hasId() {
+
+        return id != null && id >0;
+    }
 }
