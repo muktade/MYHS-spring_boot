@@ -51,4 +51,9 @@ public class ChatHistoryImpl implements ChatHistoryService {
     public void deleteByIds(Long... ids) {
         chatHistoryRepository.deleteAllByIdInBatch(Arrays.asList(ids));
     }
+
+    @Override
+    public Page<ChatHistory> getByUserId(Pageable pageable, Long userId) {
+        return chatHistoryRepository.getBySentUserId(userId, pageable);
+    }
 }

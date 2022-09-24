@@ -14,6 +14,7 @@ public class ChatHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long fromUserId;
 //    fromUse_id;
 //    touser_id;
     private String message;
