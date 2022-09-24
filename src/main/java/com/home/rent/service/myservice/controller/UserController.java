@@ -22,7 +22,7 @@ public class UserController implements BaseController<User, Long> {
     private final UserService userService;
 
     @Override
-    public ResponseEntity<User> save(User user) {
+    public ResponseEntity<User> save(@RequestBody User user) {
         System.out.println(user);
         userService.save(user);
         return ResponseEntity.ok(user);

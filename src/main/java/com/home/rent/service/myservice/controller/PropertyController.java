@@ -25,7 +25,7 @@ public class PropertyController implements BaseController<Property, Long> {
     private final PropertyService propertyService;
 
     @Override
-    public ResponseEntity<Property> save(Property property) {
+    public ResponseEntity<Property> save(@RequestBody Property property) {
         propertyService.save(property);
         return ResponseEntity.ok(property);
     }
