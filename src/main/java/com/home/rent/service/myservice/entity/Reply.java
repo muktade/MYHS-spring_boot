@@ -21,4 +21,8 @@ public class Reply {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
     private User user;
     private Date date;
+
+    public boolean hasId() {
+        return id != null && id> 0;
+    }
 }
