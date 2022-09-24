@@ -17,4 +17,8 @@ public class ChatHistory {
 //    fromUse_id;
 //    touser_id;
     private String message;
+
+    public boolean hasId() {
+        return id != null && id >0;
+    }
 }

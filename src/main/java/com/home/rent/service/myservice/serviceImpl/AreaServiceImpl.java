@@ -3,7 +3,6 @@ package com.home.rent.service.myservice.serviceImpl;
 import com.home.rent.service.myservice.entity.Area;
 import com.home.rent.service.myservice.exceptions.InvalidOperationException;
 import com.home.rent.service.myservice.repository.AreaRepository;
-import com.home.rent.service.myservice.repository.UserRepository;
 import com.home.rent.service.myservice.service.AreaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
-import java.util.List;
 
 
 @Service
