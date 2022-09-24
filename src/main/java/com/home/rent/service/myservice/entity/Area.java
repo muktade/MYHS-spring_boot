@@ -22,4 +22,7 @@ public class Area {
     @Column(name = "post_code")
     private String postCode;
 
+    public boolean hasId() {
+        return id != null && id > 0;
+    }
 }

@@ -14,9 +14,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.transaction.Transactional;
+
 @Controller
 @RequestMapping("/user/")
 @RequiredArgsConstructor
+@Transactional
 public class UserController implements BaseController<User, Long> {
 
     private final UserService userService;

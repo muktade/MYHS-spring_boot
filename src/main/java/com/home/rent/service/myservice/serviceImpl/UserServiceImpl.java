@@ -44,11 +44,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Page<User> getAll(Pageable pageable) {
+
         return userRepository.findAll(pageable);
     }
 
     @Override
     public void deleteByIds(Long... ids) {
-    userRepository.deleteAllByIdInBatch(Arrays.asList(ids));
+
+        userRepository.deleteAllByIdInBatch(Arrays.asList(ids));
     }
 }
