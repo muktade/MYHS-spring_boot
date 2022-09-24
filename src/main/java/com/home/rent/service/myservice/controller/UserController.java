@@ -44,7 +44,7 @@ public class UserController implements BaseController<User, Long> {
     }
 
     @Override
-    public ResponseEntity<User> getById(Long id) throws ResourceNotFoundException {
+    public ResponseEntity<User> getById(@PathVariable("id") Long id) throws ResourceNotFoundException {
         return null;
     }
 

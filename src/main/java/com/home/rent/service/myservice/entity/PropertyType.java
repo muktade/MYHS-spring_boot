@@ -18,4 +18,7 @@ public class PropertyType {
     private String name;
     private String type;
 
+    public boolean hasId() {
+        return id != null && id >0;
+    }
 }

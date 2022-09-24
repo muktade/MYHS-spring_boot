@@ -44,7 +44,7 @@ public class CommentsController implements BaseController<Comments, Long> {
     }
 
     @Override
-    public ResponseEntity<Comments> getById(Long id) throws ResourceNotFoundException {
+    public ResponseEntity<Comments> getById(@PathVariable("id") Long id) throws ResourceNotFoundException {
         return null;
     }
 

@@ -43,7 +43,7 @@ public class PropertyController implements BaseController<Property, Long> {
     }
 
     @Override
-    public ResponseEntity<Property> getById(Long id) throws ResourceNotFoundException {
+    public ResponseEntity<Property> getById(@PathVariable("id") Long id) throws ResourceNotFoundException {
         return null;
     }
 

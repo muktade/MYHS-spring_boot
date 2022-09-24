@@ -65,7 +65,7 @@ public class AreaController implements BaseController<Area, Long>{
     }
 
     @Override
-    public ResponseEntity<Area> getById(Long id) throws ResourceNotFoundException {
+    public ResponseEntity<Area> getById(@PathVariable("id") Long id) throws ResourceNotFoundException {
         return null;
     }
 }
